@@ -40,7 +40,14 @@ Todos os recursos usados foram baseados na percepção de melhor estratégia par
  2) Altere o usuario correspondente ao seu no arquivo main.tf   ssh-keys = "anderson:${file("~/.ssh/id_rsa.pub")}" 
  3) inicie o script ./init-deploy.sh
  4) Enquanto o script estiver rodando algumas informações vão retornar na sua tela, uma delas é a senha do ROOT do GitLab que foi feito deploy
- 5) Antes de apertar para continuar certifiquesse que o acesso esta funcional da estrutura lembrando que o acesso ao gitlab é ataves ip:8080 
- 6) Clique em continuar o script irá terminar de executar todas as funções necessárias.
- 7) 
+ 5) Antes de apertar para continuar certifiquesse que o acesso esta funcional da estrutura lembrando que o acesso ao gitlab é ataves ip:8080 (Pode demorar um pouco para que fique pronto o gitlab basta aguardar uns 3 minutinhos pois o docker demora para fazer o download da imagem) 
+ 6) Acesse o gitlab com sua senha do root e crie um novo projeto ponha qualquer nome nele.
+ 7) Clique em Settings a baixo do projeto e após isso em CI/CD > Runner
+ 8) ![image](https://user-images.githubusercontent.com/54381653/134230044-1e9b6c53-490a-462d-af01-97ea93adf9ce.png) OBS: Essas infomações já não existem mais.
+ 9) Com estes dados será necessário cadastrar o Runner para que o gitlab execute os scripts no novo ambiente.
+ 10) No arquivo gitlab-runner.yml troque as informações como URL e registration token que estão destacadas com os nomes $URL E $TOKENREG. --url --clone-url --registration-token
+ 11) Pronto agora ele vai terminar de depoylar por completo. A estrutura nesse momento se encontra toda pronta.
+ 12) Para finalizar o Projeto agora iremos copiar o nosso arquivo gitlab-ci.yml la no editor de criação de pipeline do CI/CD feito isso basta dar run na pipeline e se tudo der certo ele irá refazer um novo deploy na estrutura.
+
+
 
