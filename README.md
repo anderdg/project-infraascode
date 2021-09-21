@@ -30,3 +30,17 @@ Todos os recursos usados foram baseados na percepção de melhor estratégia par
 ![image](https://user-images.githubusercontent.com/54381653/134224104-9649e06e-5fd4-43e5-9042-6e2251f6326a.png)
 - Adicione o ID do seu projeto no arquivo variables.tf
  ![image](https://user-images.githubusercontent.com/54381653/134226145-250fb684-c5dc-4d72-9279-a73b62a0b9ca.png)
+ 
+ 
+ ## Certo tudo preparado como prosseguir?
+ 
+ Para que possamos dar continuidade  no projeto você deverá fazer o seguinte:
+ 
+ 1) Criar uma chave publica SSH para seu usuario lembre de deixar ela no caminho: ~/.ssh/id_rsa.pub
+ 2) Altere o usuario correspondente ao seu no arquivo main.tf   ssh-keys = "anderson:${file("~/.ssh/id_rsa.pub")}" 
+ 3) inicie o script ./init-deploy.sh
+ 4) Enquanto o script estiver rodando algumas informações vão retornar na sua tela, uma delas é a senha do ROOT do GitLab que foi feito deploy
+ 5) Antes de apertar para continuar certifiquesse que o acesso esta funcional da estrutura lembrando que o acesso ao gitlab é ataves ip:8080 
+ 6) Clique em continuar o script irá terminar de executar todas as funções necessárias.
+ 7) 
+
