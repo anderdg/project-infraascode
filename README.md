@@ -50,7 +50,7 @@ Todos os recursos usados foram baseados na percepção de melhor estratégia par
  10) Para finalizar o Projeto agora iremos copiar o nosso arquivo gitlab-ci.yml la no editor de criação de pipeline do CI/CD feito isso basta dar run na pipeline e se tudo der certo ele irá refazer um novo deploy na estrutura.
 
 
-#Conclusão
+# Conclusão
 
 Embora tenha feito o ambiente em 2 containers a estutura que foi criada com o projeto ela pode ser usada em larga escala com algumas alterações. Isto se deve a versatilidade das ferramentas utilizadas e simplicidade em se trabalhar com o GCP.
 
