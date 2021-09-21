@@ -28,26 +28,36 @@ Todos os recursos usados foram baseados na percepção de melhor estratégia par
 - Na barra de pesquisa procure por "Contas e Serviços". Crie uma conta de serviço para esse projeto delegando o Papel de Adminstrador.
 - Gere a chave no tipo JSON para a conta e substitua o conteúdo do codigo-acesso-gcp.json pelo gerado no painel do gcp.
 ![image](https://user-images.githubusercontent.com/54381653/134224104-9649e06e-5fd4-43e5-9042-6e2251f6326a.png)
-- Adicione o ID do seu projeto no arquivo variables.tf
- ![image](https://user-images.githubusercontent.com/54381653/134226145-250fb684-c5dc-4d72-9279-a73b62a0b9ca.png)
+- Adicione o ID do seu projeto no arquivo variables.tf ![image](https://user-images.githubusercontent.com/54381653/134226145-250fb684-c5dc-4d72-9279-a73b62a0b9ca.png)
+- Criar uma chave publica SSH para seu usuario lembre de deixar ela no caminho: ~/.ssh/id_rsa.pub
+- Altere o usuario correspondente ao seu no arquivo main.tf ssh-keys = "anderson:${file("~/.ssh/id_rsa.pub")}"
+
  
  
  ## Certo tudo preparado como prosseguir?
  
  Para que possamos dar continuidade  no projeto você deverá fazer o seguinte:
  
- 1) Criar uma chave publica SSH para seu usuario lembre de deixar ela no caminho: ~/.ssh/id_rsa.pub
- 2) Altere o usuario correspondente ao seu no arquivo main.tf   ssh-keys = "anderson:${file("~/.ssh/id_rsa.pub")}" 
- 3) inicie o script ./init-deploy.sh
- 4) Enquanto o script estiver rodando algumas informações vão retornar na sua tela, uma delas é a senha do ROOT do GitLab que foi feito deploy
- 5) Antes de apertar para continuar certifiquesse que o acesso esta funcional da estrutura lembrando que o acesso ao gitlab é ataves ip:8080 (Pode demorar um pouco para que fique pronto o gitlab basta aguardar uns 3 minutinhos pois o docker demora para fazer o download da imagem) 
- 6) Acesse o gitlab com sua senha do root e crie um novo projeto ponha qualquer nome nele.
- 7) Clique em Settings a baixo do projeto e após isso em CI/CD > Runner
- 8) ![image](https://user-images.githubusercontent.com/54381653/134230044-1e9b6c53-490a-462d-af01-97ea93adf9ce.png) OBS: Essas infomações já não existem mais.
- 9) Com estes dados será necessário cadastrar o Runner para que o gitlab execute os scripts no novo ambiente.
- 10) No arquivo gitlab-runner.yml troque as informações como URL e registration token que estão destacadas com os nomes $URL E $TOKENREG. --url --clone-url --registration-token
- 11) Pronto agora ele vai terminar de depoylar por completo. A estrutura nesse momento se encontra toda pronta.
- 12) Para finalizar o Projeto agora iremos copiar o nosso arquivo gitlab-ci.yml la no editor de criação de pipeline do CI/CD feito isso basta dar run na pipeline e se tudo der certo ele irá refazer um novo deploy na estrutura.
+ 1) inicie o script ./init-deploy.sh
+ 2) Enquanto o script estiver rodando algumas informações vão retornar na sua tela, uma delas é a senha do ROOT do GitLab que foi feito deploy
+ 3) Antes de apertar para continuar certifiquesse que o acesso esta funcional da estrutura lembrando que o acesso ao gitlab é ataves ip:8080 (Pode demorar um pouco para que fique pronto o gitlab basta aguardar uns 3 minutinhos pois o docker demora para fazer o download da imagem) 
+ 4) Acesse o gitlab com sua senha do root e crie um novo projeto ponha qualquer nome nele.
+ 5) Clique em Settings a baixo do projeto e após isso em CI/CD > Runner
+ 6) ![image](https://user-images.githubusercontent.com/54381653/134230044-1e9b6c53-490a-462d-af01-97ea93adf9ce.png) OBS: Essas infomações já não existem mais.
+ 7) Com estes dados será necessário cadastrar o Runner para que o gitlab execute os scripts no novo ambiente.
+ 8) No arquivo gitlab-runner.yml troque as informações como URL e registration token que estão destacadas com os nomes $URL E $TOKENREG. --url --clone-url --registration-token
+ 9) Pronto agora ele vai terminar de depoylar por completo. A estrutura nesse momento se encontra toda pronta.
+ 10) Para finalizar o Projeto agora iremos copiar o nosso arquivo gitlab-ci.yml la no editor de criação de pipeline do CI/CD feito isso basta dar run na pipeline e se tudo der certo ele irá refazer um novo deploy na estrutura.
+
+
+#Conclusão
+
+Embora tenha feito o ambiente em 2 containers a estutura que foi criada com o projeto ela pode ser usada em larga escala com algumas alterações. Isto se deve a versatilidade das ferramentas utilizadas e simplicidade em se trabalhar com o GCP.
+
+Lembrando que isso é apenas um teste com container, o cenario ideal sera apenas 1 docker com o gitlab em seu funcionamento, e os runners em diversas instancias diferentes e assim provendo apenas de uma unica key e host evitando qualquer processo manual futuro. Tendo assim de ser realizado apenas na primeira vez que utiliza o deploy!.
+
+Caso queiram Ver outras maneiras de como externas mais instancias me manda um contato que ensino como fazer! :D
 
 
 
+Duvidas?: anderdgs@outlook.com
