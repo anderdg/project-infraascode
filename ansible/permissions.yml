@@ -10,10 +10,10 @@
       become: yes      
 
     - name: "Insere permissão e Grupo para o usuario gitlab-runner"
-      shell: "sudo docker exec gitlab-ce usermod -a -G sudo gitlab-runner"
+      shell: "sudo docker exec gitlab-runner usermod -a -G sudo gitlab-runner"
       become: yes      
 
     - name: "Configura Sudoers"
-      shell: "sed -i 's/ALL=(ALL:ALL) ALL/ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers"
+      shell: "sudo docker exec gitlab-runner sed -i 's/ALL=(ALL:ALL) ALL/ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers"
       become: yes
 
