@@ -16,6 +16,8 @@ echo -e "[vminfra]" >> ./hosts
 
 terraform init
 
+sleep 15
+
 
 # Deploy das Instancias.
 
