@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#                                                                 #
+# ATENÇÃO ESSE SCRIPT DEVE SER  RODADO APENAS NO PRIMEIRO DEPLOY! # 
+#                                                                 #
+
 # Limpa o hosts para evitar qualquer conflito.
 # Lembre de que caso troque o nome da ROLE das instancias deve ser alterado aqui também no ECHO.
 
@@ -18,13 +22,23 @@ echo -e "[vminfra]" >> ./hosts
 
 terraform apply -auto-approve
 
+$VMIP=$(terraform output ip)
 # Instalações com Ansible.
 export ANSIBLE_HOST_KEY_CHECKING=False;
 ansible-playbook ./ansible/provisoning.yml -i ./hosts
 
 # Pra facilitar a vida de voces a nova versão do gitlab ja vem com uma senha padrão do root/Admin.
 # Sendo assim esse playbook serve apenas para entrar na instancia do gitlab-ce e trazer essa info pra vocês :D
+echo "Pegando a senha do usuario: root do gitlab-ce"
+echo ""
 ansible-playbook ./ansible/rootglab-ce.yml -i hosts -v | grep -oe "Password:............................................."
 
+echo ""
+echo "Gitlab-ce estará disponivel na porta IPDAINSTANCIA:8080"
 
+
+echo "Aperte qualquer tecla para continuar"
+read "" 0
+
+ansible-playbook ./ansible/permissions.yml -i hosts
 echo "Simples né? :D"

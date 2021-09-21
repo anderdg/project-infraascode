@@ -1,12 +1,12 @@
 {
-  "type": "",
-  "project_id": "",
-  "private_key_id": "",
-  "private_key": "",
-  "client_email": "",
-  "client_id": "",
-  "auth_uri": "",
-  "token_uri": "",
-  "auth_provider_x509_cert_url": "",
-  "client_x509_cert_url": ""
+  "type": "service_account",
+  "project_id": "projeto-infra-326302",
+  "private_key_id": "3be841e525c0d323681d6f3d03915279ed4f3f9a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDW3WK32LfZwCv5\ntgG1buzyuVWx1N+K1w65oqLBhBP8zzWp3gQT7qbDDBthSsTVeaY9aaWkSYUpqGS7\nyPPfA5Puxgap6tjS8TZ1feXxx2OOj1SI7BIs+MEAsYoRCFf0Dc/r0KZT8eXcTfZv\n+KnpT/SV8C2lzKDpj2sAca6OHJ2T/Baks9wSd2zcX7OoZQGK/FcDFRQ7rWXm8Bdh\nFmgFwVmh2hxX72zG2+xFxNulg4UF4OhctAMMYBaoQsiyXxR9wI3cvRKnowJk55n6\nNY+A2bZF2OTrTNJ0OJU947FNc+byzl7GYRZuivOayoqtJg8y4rctWflRm8GVphxd\nTbHx4HWRAgMBAAECgf8rxBAqeAGLOXks/E2sDktS0AtIm//1crntBkUjGSs26XUG\ncOBEEDNJK53nu8LhZOFRvZvltbD3OXfSEggZkKtOyBszehgJ3UZEBrgu9aqC6ta9\nBsvwWfZ9ypnbr42vU26W+GvzIrNyd71mDwbHvTsJuC9haSJAZcURFdqtg5pffU+4\nKZW3i5l7eyBPuTdVwPEoehUcO/0aUWYxrod/5UYGoDnuviZSmk42c09EjGyVlBrG\nLDjBWjx5iJNYIy/D3gnFk5/jy4T2LNbypdZaO/GPPrGN73H40PZmlnPg1fUUb7VN\nPiAOSkjYPn5Fttfi9y06KdNOOGMy8J2dId1Ht5UCgYEA7/ynaPfyVE3vAfEieJez\n/2OLsZUip9D3x9C8alF2pa+DktYiicMwsB5WDiTwvkX+T7uJ7PFCZ/TTs68WaPsA\nuooQ8pRjHdxJv5YGzkTW4R/7GeJYhraRRhAYoee8qmBSHOkA6lauhv9tOhw2dr8o\nl6baJQqmSjwFVhSW0GfEL1sCgYEA5TObWTQRtx2KYy672UeeeAzvjw13SbzTc1Y+\nJsdoomWlgVbVAnG13FUWrqIN5cXIz4fNqljwchlKGUK4f5uEhsXvH3zFCPXRVe87\nuckS0AUsuecWofMtoJG3jMCmbYR/5Z1eq0IwLDbqrhMSNsf1A3LZadCjCxCRvY/i\nGcXzzoMCgYEA44/wLtjuMIK14GGHDlLLm6AJFpsUAY1lZ1PHVglpODL10Ia8uWUd\nBeO+NitRHRvByllKsCMVlP3SwM+FsIZSapABAgUy912rkL/yNCWSnGZ29FRtHVCA\n8K7SrLPRcr1jH4bSF2OamugZ6sBV5MPe+e59bCJtDHddmAJt/7Bll4ECgYA2KnwM\nGMIXBGQwDFtYfhR1SplStVv7kSRnnXoSsA2KU3tJlbvBWB4ic/loS+P86UELyoxQ\nNbSdQlzAm4P+pEItl5lrV5E5DN7r8B2tSlen0ZFAXdx7aXze9ZDrMpwiRa30FbzJ\nvFqmGFRdzyP+zkKZDgtTdnsRoljO87H7ZUy5AQKBgQDNZ+7+UbHO0JIsZihKn1E7\nJngc64thmJvhgq13btfWxFaeNo+mTbhmp6Db+/n4fcUFnhqYI3SDgLNR6N7t5tju\nTTvhptwi2QLxyL8+lwe1P4mPar3Nqlf1HeABf0Ivo4vlB+wJF12XqTs2PgoaRN0f\nQULe6+g5+xUq1ZNvbl5+Og==\n-----END PRIVATE KEY-----\n",
+  "client_email": "terraforms@projeto-infra-326302.iam.gserviceaccount.com",
+  "client_id": "111855184054903600926",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/terraforms%40projeto-infra-326302.iam.gserviceaccount.com"
 }
