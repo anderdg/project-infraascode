@@ -50,12 +50,13 @@ Todos os recursos usados foram baseados na percepção de melhor estratégia par
  10) Para finalizar o Projeto agora iremos copiar o nosso arquivo gitlab-ci.yml la no editor de criação de pipeline do CI/CD feito isso basta dar run na pipeline e se tudo der certo ele irá refazer um novo deploy na estrutura.
  OBS:![image](https://user-images.githubusercontent.com/54381653/134264897-cf36b2b1-9a3b-41bb-9545-c0f5e732c291.png)
 
-Crie essas 3 variaveis no CI/CD conteúdo so conteúdos:
+Crie essas 3 variaveis no CI/CD contendo somente os seguintes conteúdos:
 
 - ACESSO_KEY_GCP: conteúdo do json do arquivo codigo-acesso-gcp.json
 - REGISTRATION_KEY: A key de acesso ao Runner (Do RUNNER do projeto, não do runner global)
 - URL_RUNNER: O ip do gitlab sendo assim o value ficará apenas com IPDOSERVIDOR:8080
 
+FEITO TUDO RUNPIPELINE E ABRAÇO!
 Concluído!
 
 
