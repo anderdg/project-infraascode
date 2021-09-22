@@ -16,13 +16,13 @@ echo -e "[vminfra]" >> ./hosts
 
 terraform init
 
-sleep 15
+sleep 3
 
 
 # Deploy das Instancias.
 
 terraform apply -auto-approve
-
+sleep 15
 
 # Instalações com Ansible.
 export ANSIBLE_HOST_KEY_CHECKING=False;
